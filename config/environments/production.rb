@@ -30,12 +30,6 @@ Rails.application.configure do
   config.assets.compile = false
   
   
-  # for fonts?
-  config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
-
-  config.assets.precompile += %w( .otf .eot .svg .ttf .woff)
-  
-  
   # Generate digests for assets URLs.
   config.assets.digest = true
 
