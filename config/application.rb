@@ -22,7 +22,8 @@ module TrellinoApp
 
     I18n.enforce_available_locales = false
 
-    config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
+    config.assets.paths << Rails.root.join('vendor', 'assets', 'fonts')
+    
     config.assets.precompile += %w( .otf .eot .svg .ttf .woff)
     
   end
