@@ -121,10 +121,7 @@
 
 .tile.board-tile {
   background-color: rgb(25, 149, 220);
-  min-height: 15vw;
-  @media (min-height: 500px) {
-   min-height: 100px; 
-  }
+  min-height: 200px;
 
   #new-board {
     color: white;
@@ -150,7 +147,7 @@
 .tile.list-tile {
   
   background-color: rgb(68, 186, 117);
-  min-height: 15vw;
+  min-height: 200px;
   
   #new-list {
     color: white;
