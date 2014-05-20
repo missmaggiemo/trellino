@@ -60,3 +60,6 @@ gem "backbone-on-rails"
 gem "underscore"
 gem 'jquery-ui-rails'
 gem 'devise'
+gem 'sprockets', '2.11.0'
+
+
