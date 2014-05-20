@@ -19,7 +19,7 @@
 @font-face {
   font-family: 'KaushanScript';
   font-style: normal;
-  src: local('KaushanScript') url('/assets/KaushanScript-Regular.otf') format('opentype');
+  src: local('KaushanScript') font-url('/assets/KaushanScript-Regular.otf') format('opentype');
 }
 
 #body {
