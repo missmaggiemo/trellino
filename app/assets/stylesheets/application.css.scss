@@ -121,8 +121,10 @@
 
 .tile.board-tile {
   background-color: rgb(25, 149, 220);
-  height: 15vw;
-  min-height: 100px;
+  min-height: 15vw;
+  @media (min-height: 500px) {
+   min-height: 100px; 
+  }
 
   #new-board {
     color: white;
