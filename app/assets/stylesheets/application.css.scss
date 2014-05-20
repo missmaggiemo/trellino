@@ -1,0 +1,195 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require bootstrap
+ *= require jquery.ui.all
+ *= require_self
+ */
+
+@font-face {
+  font-family: 'KaushanScript';
+  font-style: normal;
+  src: local('KaushanScript') url('/assets/KaushanScript-Regular.otf') format('opentype');
+}
+
+#body {
+  margin: 30px 0;
+  width: 100vw;
+}
+
+
+
+//navbar
+
+.navbar {
+  border: none;
+  border-radius: 0px;
+  background-image: none;
+  font-size: 2em;
+}
+
+#logo {
+  font-family: 'KaushanScript';
+}
+
+.navbar-brand#logo {
+  font-size: 1.5em;
+}
+
+
+
+//user forms
+
+.form-box {
+  background-color: #D9EDF7;
+  border-radius: 10px;
+  padding: 20px;
+  
+  .form-control {
+    border: none;
+  }
+  
+}
+
+.user-form-links {
+  margin: 20px 0;
+}
+
+
+
+//tiles
+
+.tile {
+  margin: 20px;
+  padding: 10px;
+  border-radius: 15px;
+  color: white;
+  position: relative;
+
+  h1 {
+    color: white;
+  }
+  
+  h1 a {
+    color: white;
+    
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+
+.sort-placeholder {
+  border: 1px dashed #111;
+  border-radius: 10px;
+}
+
+.col-md-3.sort-placeholder {
+  height: 15vw;
+  min-height: 100px;
+}
+
+.delete-x {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
+  
+  a {
+    font-size: 2em;
+    float: right;
+    color: pink; 
+    
+    &:hover {
+      color: red;
+    }
+  }
+}
+
+//boards
+
+.tile.board-tile {
+  background-color: rgb(25, 149, 220);
+  height: 15vw;
+  min-height: 100px;
+
+  #new-board {
+    color: white;
+  }
+  
+  p {
+    color: #FDFDFD;
+    font-size: 1.2em;
+  }
+  
+  button {
+    margin-top: 10px;
+  }
+}
+
+#new-board-tile form input {
+  color: #111;
+}
+
+
+//lists
+
+.tile.list-tile {
+  
+  background-color: rgb(68, 186, 117);
+  min-height: 15vw;
+  
+  #new-list {
+    color: white;
+  } 
+}
+
+.card-tile {
+  width: 100%;
+  padding: 5px;
+  min-height: 40px;
+  position: relative;
+  
+  p {
+    background-color: rgb(214, 240, 225);
+    color: rgb(68, 186, 117);
+    border-radius: 5px;
+    padding: 5px;
+  }
+  
+  textarea {
+    padding: auto;
+  }
+}
+
+#new-card-tile a {
+  color: white;
+}
+
+button#create-card {
+  margin-top: 5px;
+}
+
+
+.delete-x-link {
+  float: right;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 0 10px 15px 0;
+  color: pink;
+  &:hover {
+    color: red;
+  }
+}

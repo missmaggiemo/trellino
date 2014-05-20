@@ -1,0 +1,19 @@
+
+development:
+  adapter: postgresql
+  database: trellino_dev
+  host: localhost
+
+test: &test
+  adapter: postgresql
+  database: trellino_test
+  host: localhost
+  
+production:
+  adapter: postgresql
+  database: trellino_prod
+  host: localhost
+
+cucumber:
+  <<: *test
+  

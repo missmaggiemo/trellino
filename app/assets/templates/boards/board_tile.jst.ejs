@@ -1,0 +1,7 @@
+<div class="tile board-tile" id="board-tile">
+  <h1 class="board-header" id="board-title"><a href="#<%= board.url() %>"><%= board.escape('title') %></a></h1>
+  <p class="board-descrip"><%= (board.escape('description').length > 75) ? (board.escape('description').substring(0, 75) + "...") : board.escape('description') %></p>
+  <div class="delete-x" data-id="<%= board.id %>">
+    <a><span class="glyphicon glyphicon-remove"></span></a>
+  </div>
+</div>
