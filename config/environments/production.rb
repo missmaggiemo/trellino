@@ -28,7 +28,14 @@ Rails.application.configure do
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = false
+  
+  
+  # for fonts?
+  config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
 
+  config.assets.precompile += %w( .otf .eot .svg .ttf .woff)
+  
+  
   # Generate digests for assets URLs.
   config.assets.digest = true
 
