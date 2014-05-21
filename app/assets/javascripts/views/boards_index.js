@@ -58,7 +58,7 @@ window.TrellinoApp.Views.BoardsIndex = Backbone.TileView.extend({
     "click #new-board-tile": "boardsNew"
   }, Backbone.TileView.prototype.events),
   
-  boardsNew: function () {
+  boardsNew: function (event) {
     event.preventDefault();
     var newView = new TrellinoApp.Views.BoardsNew();
     this.$el.find('#new-board-tile').replaceWith(newView.render().$el);

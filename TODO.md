@@ -1,5 +1,11 @@
 # TODO
 
+ Forms are completely broken on Firefox.
+
+
+
+
+
 
 ### Make the show, index, and new page for boards.
 <!-- API for boards -->
