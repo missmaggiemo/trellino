@@ -1,7 +1,7 @@
 # TODO
 
- Forms are completely broken on Firefox.
-
+Forms are completely broken on Firefox.
+Does Bootstrap work on Firefox?
 
 
 
