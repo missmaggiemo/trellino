@@ -12,7 +12,7 @@ window.TrellinoApp.Views.BoardsShow = Backbone.CompositeView.extend({
   },
   
   events: {
-    "click #new-list-tile": "listsNew"
+    "click .col-md-3#new-list-tile": "listsNew"
   },
 
   listsNew: function (event) {

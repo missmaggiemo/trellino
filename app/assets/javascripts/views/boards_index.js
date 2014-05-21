@@ -55,7 +55,7 @@ window.TrellinoApp.Views.BoardsIndex = Backbone.TileView.extend({
   template: JST["boards/index"],
   
   events: _.extend({
-    "click #new-board-tile": "boardsNew"
+    "click .col-md-3#new-board-tile": "boardsNew"
   }, Backbone.TileView.prototype.events),
   
   boardsNew: function (event) {
