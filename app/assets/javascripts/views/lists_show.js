@@ -21,7 +21,7 @@ window.TrellinoApp.Views.ListsShow = Backbone.CompositeView.extend({
   
   events: {
     "click .delete-x a": "delete",
-    "click a#new-card": "cardsNew",
+    "click #new-card-tile": "cardsNew",
     "dblclick #list-tile": "editTile"  
   },
   
