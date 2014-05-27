@@ -3,15 +3,21 @@
     <h1>Sign In</h1>
     
     <div class="form-box">
-      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-        <div class="form-group"><%= f.label :email %>
-        <%= f.email_field :email, autofocus: true, class: "form-control" %></div>
+      <form accept-charset="UTF-8" action="/users/sign_in" class="new_user" id="new_user" method="post">
+        <div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"><%= form_auth %></div>
+          <div class="form-group"><label for="user_email">Email</label>
+          <input autofocus="autofocus" class="form-control" id="user_email" name="user[email]" type="email" value="<%= resource.email %>"></div>
 
-        <div class="form-group"><%= f.label :password %>
-          <%= f.password_field :password, autocomplete: "off", class: "form-control" %></div>
+          <div class="form-group"><label for="user_password">Password</label>
+            <input autocomplete="off" class="form-control" id="user_password" name="user[password]" type="password"></div>
 
-        <div><%= f.submit "Sign In", class: "btn btn-primary" %></div>
-      <% end %>
+          <div><input class="btn btn-primary" id="sign-in-btn" name="commit" type="submit" value="Sign In"></div>
+      </form>
+      
+      <div id="guest-spacer">
+        <button id="guest-login" class="btn btn-info">Sign In as Guest</button>
+      </div>
+      
     </div>    
     
     <div class="user-form-links">
@@ -20,3 +26,14 @@
     
   </div>
 </div>
+
+
+
+<script type="text/javascript">
+$('#guest-login').click( function (event) {
+  $('#user_email').val('guest@missmaggiemo.com');
+  $('#user_password').val('testtest');
+  $('#sign-in-btn').trigger('click');
+});
+</script>
+

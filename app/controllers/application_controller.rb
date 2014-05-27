@@ -4,6 +4,12 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   
   before_action :configure_permitted_parameters, if: :devise_controller?
+  
+  helper_method :form_auth
+  
+  def form_auth
+    "<input type='hidden' name='authenticity_token' value='#{form_authenticity_token}' id='authenticity_token'>".html_safe
+  end
 
   private
 
