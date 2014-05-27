@@ -20,12 +20,19 @@ window.TrellinoApp.Views.BoardsTile = Backbone.View.extend({
     
     var newView = JST['boards/edit']({board: view.model});
     
-    view.$el.find('#board-tile').replaceWith(newView);
+    var $tile = view.$el.find('#board-tile');
+    
+    $tile.replaceWith(newView);
     
     $('form').on('submit', function(event){
       event.preventDefault();
       var params = $(event.currentTarget).serializeJSON()["board"];
       view.model.save(params);
+    });
+    
+    $('form').on('blur', '.form-control', function(event){
+      event.preventDefault();
+      $('form').replaceWith($tile);
     });
     
     return this;
@@ -61,7 +68,14 @@ window.TrellinoApp.Views.BoardsIndex = Backbone.TileView.extend({
   boardsNew: function (event) {
     event.preventDefault();
     var newView = new TrellinoApp.Views.BoardsNew();
-    this.$el.find('#new-board-tile').replaceWith(newView.render().$el);
+    var $tile = this.$el.find('#new-board-tile');
+    $tile.replaceWith(newView.render().$el);
+    
+    $('form').on('blur', '.form-control', function(event){
+      event.preventDefault();
+      $('#new-board-form').replaceWith($tile);
+    });
+    
     return this;
   },
   

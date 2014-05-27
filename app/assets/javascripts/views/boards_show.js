@@ -18,7 +18,14 @@ window.TrellinoApp.Views.BoardsShow = Backbone.CompositeView.extend({
   listsNew: function (event) {
     event.preventDefault();
     var newView = new TrellinoApp.Views.ListsNew({ board: this.model });
-    this.$el.find('#new-list-tile').replaceWith(newView.render().$el);
+    var $tile = this.$el.find('#new-list-tile');
+    $tile.replaceWith(newView.render().$el);
+    
+    $('form').on('blur', '.form-control', function(event){
+      event.preventDefault();
+      $('#new-list-form').replaceWith($tile);
+    });
+    
     return this;
   },
   

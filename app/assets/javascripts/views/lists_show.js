@@ -31,12 +31,19 @@ window.TrellinoApp.Views.ListsShow = Backbone.CompositeView.extend({
     
     var newView = JST['lists/edit']({list: view.model});
     
-    view.$el.find('#list-tile').replaceWith(newView);
+    var $tile = view.$el.find('#list-tile');
+    
+    $tile.replaceWith(newView);
     
     $('form').on('submit', function(event){
       event.preventDefault();
       var params = $(event.currentTarget).serializeJSON()["list"];
       view.model.save(params);
+    });
+    
+    $('form').on('blur', '.form-control', function(event){
+      event.preventDefault();
+      $('form').replaceWith($tile);
     });
     
     return this;
