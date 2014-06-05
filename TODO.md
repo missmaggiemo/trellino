@@ -1,8 +1,7 @@
 # TODO
 
-Forms are completely broken on Firefox.
-Does Bootstrap work on Firefox?
 
+Adding a list doesn't work in production. Are all the JS libraries loading in the right order?
 
 
 
