@@ -11,6 +11,7 @@ window.TrellinoApp.Views.ListsNew = Backbone.View.extend({
   },
   
   initialize: function (options) {
+    console.log('init');
     this.board = options.board;
   },
   
@@ -22,6 +23,7 @@ window.TrellinoApp.Views.ListsNew = Backbone.View.extend({
   },
     
   submit: function(event) {
+    console.log('submit');
     var view = this;
     event.preventDefault();
 
