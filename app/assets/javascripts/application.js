@@ -15,7 +15,6 @@
 //= require jquery.ui.all
 //= require jquery.serializejson
 //= require underscore
-//= require jquery.ui.touch-punch
 //= require backbone
 //= require trellino_app
 //= require_tree ../templates
