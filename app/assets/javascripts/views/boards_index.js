@@ -30,10 +30,10 @@ window.TrellinoApp.Views.BoardsTile = Backbone.View.extend({
       view.model.save(params);
     });
     
-    $('form').on('blur', '.form-control', function(event){
-      event.preventDefault();
-      $('form').replaceWith($tile);
-    });
+    // $('form').on('blur', '.form-control', function(event){
+//       event.preventDefault();
+//       $('form').replaceWith($tile);
+//     });
     
     return this;
   },
@@ -71,10 +71,10 @@ window.TrellinoApp.Views.BoardsIndex = Backbone.TileView.extend({
     var $tile = this.$el.find('#new-board-tile');
     $tile.replaceWith(newView.render().$el);
     
-    $('form').on('blur', '.form-control', function(event){
-      event.preventDefault();
-      $('#new-board-form').replaceWith($tile);
-    });
+    // $('form').on('blur', '.form-control', function(event){
+//       event.preventDefault();
+//       $('#new-board-form').replaceWith($tile);
+//     });
     
     return this;
   },

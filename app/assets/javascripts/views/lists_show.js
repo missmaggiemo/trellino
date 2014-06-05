@@ -41,10 +41,10 @@ window.TrellinoApp.Views.ListsShow = Backbone.CompositeView.extend({
       view.model.save(params);
     });
     
-    $('form').on('blur', '.form-control', function(event){
-      event.preventDefault();
-      $('form').replaceWith($tile);
-    });
+    // $('form').on('blur', '.form-control', function(event){
+//       event.preventDefault();
+//       $('form').replaceWith($tile);
+//     });
     
     return this;
   },
